@@ -1,0 +1,13 @@
+(* Practice Problem 1:
+Create a function createFunction that creates and returns a function. When the newly created function is called, it should return the string 'hello world'.
+
+Practice Problem 2:
+Write a function createGreetingFunction that generates and returns a greeting function. When the generated function is invoked, it should return the string 'hello world'.
+
+Practice Problem 3:
+Design a function generateHelloWorldFunction which produces and returns a function. When the function produced by generateHelloWorldFunction is called, it should return 'hello world' as a string. *)
+
+function createFunction({
+function returnFunction()
+
+
