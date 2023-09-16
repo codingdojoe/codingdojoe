@@ -1,25 +1,112 @@
-(* Practice Problem 1:
+**** Practice Problem 1: ****
+
 Create a function createFunction that creates and returns a function. When the newly created function is called,
 it should return the string 'hello world'.
 
-Practice Problem 2:
+**** Practice Problem 2: ****
+
 Write a function createGreetingFunction that generates and returns a greeting function. When the generated function is invoked,
 it should return the string 'hello world'.
 
-Practice Problem 3:
+**** Practice Problem 3: ****
+
 Design a function generateHelloWorldFunction which produces and returns a function.
 When the function produced by generateHelloWorldFunction is called, it should return 'hello world' as a string. *)
 
-Practice Problem 4:
+**** Practice Problem 4: ****
+
 Write a function calculateArea that takes two parameters, length and width, and calculates the area of a rectangle. Return the calculated area.
 
-Practice Problem 5:
+**** Practice Problem 5: ****
+
 Create a function reverseString that takes a string as input and returns the reverse of that string.
 For example, if the input is "hello," the function should return "olleh."
 
-Practice Problem 6:
+**** Pratice Problem 6: ****
+
+You are given a sentence as a string. Write a function reverseWords that takes a string as input and returns the sentence with each word reversed.
+
+Input:
+A string, sentence, consisting of alphabets and spaces. The length of the string is between 1 and 1000 characters.
+
+
+Output:
+Return the sentence with each word reversed.
+
+
+**** Practice Problem 7: ****
+
+
 Design a function findMax that takes an array of numbers as input and returns the maximum value in the array.
 For example, if the input is [4, 7, 1, 9, 2], the function should return 9.
+
+
+**** Practice Problem 8: ****
+
+Declare a variable, 'nums', and set it to an array containing the numbers 4, 22, 87, 55, 30, and
+43.
+
+
+**** Practice Problem 9: ****
+
+Declare a function 'subtractOne', which takes a number as an argument and returns that
+number minus one.
+
+
+
+**** Practice Problem 10: ****
+
+
+Declare a function 'addOne', which takes a number argument and returns that number plus
+one.
+
+
+
+
+**** Practice Problem 11: ****
+
+
+Declare a function 'evensAndOdds';, which takes two arguments: an array of numbers, and
+another array containing two functions.
+'evensAndOdds' should run the *first* callback on every odd number from the numbers array,
+and the *second* callback on every even number. It should return a new array containing the
+results of these callbacks, in the same order.
+
+Test your 'evensAndOdds' function using the 'nums' array as the first argument, and an array
+containing 'subtractOne' and 'addOne' as the second argument.
+You should receive the result [5, 23, 86, 54, 31, 42].
+
+
+
+**** Practice Problem 12: ****
+
+Declare a function 'charCount'which takes in a single character
+as an argument and returns another function. The returned function takes a string as an
+argument,
+and when invoked, it will search that string for the character initially passed in to the
+'charCount' function,
+
+and return the number of occurrences.
+Once complete, right some code to test your 'charCount' function.
+
+
+
+**** Practice Problem 13: ****
+
+
+You are given a string respresesting a sentence. Write a function 'capitalizeFirstLetter' that takes a string as input and returns the
+sentence with the first letter of each word capitalized. 
+
+
+
+
+
+**** Pratice Problem 14 ****
+
+
+You are given an array of numbers. Write a function 'getAverage' that takes an array of numbers as input and returns the average (mean)
+of those numbers. 
+
 
 
 #1
@@ -87,6 +174,159 @@ console.log(newNewResult)
 
 
 #5
+
+Create a function reverseString that takes a string as input and returns the reverse of that string.
+For example, if the input is "hello," the function should return "olleh."
+
+
+function reverseString(str) {
+let reversedStr = '';
+for (let i = str.length -1; i >= 0; i--){
+reversedStr += str[i];
+}
+return reversedStr;
+}
+const originalString = 'hello';
+const reversedString = reversedString(originalString);
+console.log(reverseString)
+
+
+
+#6
+
+
+function reverseWords(sentence) {
+let reversedSentence = '';
+for (let i = sentence.length - 1; i >= 0; i--){
+reversedSentence += sentence[i];
+}
+
+return reversedSentence;
+
+}
+
+const originalSentence = 'I need to poop, but I am coding';
+
+const reversedSentence = reverseWords(originalSentence);
+
+console.log(reversedSentence)
+
+
+
+function reversedWords(sentence){
+const words = sentence.split(' ');
+const reversedWords = words.map(word => {
+let reversedWord = '' ;
+for (let i = word.length - 1; i >=0; i--){
+reversedWord += word[i];
+}
+return reversedWord;
+});
+return reversedWords.join(' ');
+}
+const originalSentence = 'I need to poop but I am coding';
+const reversedSentence = reversedWords(originalSentence);
+console.log(reversedSentence)
+
+
+
+#7
+
+Design a function findMax that takes an array of numbers as input and returns the maximum value in the array.
+For example, if the input is [4, 7, 1, 9, 2], the function should return 9.
+
+function findMax(numbers) {
+if (numbers.length === 0) {
+return undefined;
+}
+
+let max = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
+if (numbers[i] > max) {
+max = numbers[i];
+}
+}
+return max;
+
+const numbersArray = [4, 7, 1, 9, 2];
+const maxValue = findMax(numbersArray);
+console.log(maxValue)
+
+
+#8
+
+Declare a variable, 'nums', and set it to an array containing the numbers 4, 22, 87, 55, 30, and
+43.
+
+let nums = [4, 22, 87, 55, 30, 43];
+
+
+
+
+#9
+
+Declare a function 'subtractOne', which takes a number as an argument and returns that
+number minus one.
+
+const subtractOne(num) { 
+return num - 1;
+}
+
+console.log(num)
+
+
+
+#10
+
+
+Declare a function 'addOne', which takes a number argument and returns that number plus
+one.
+
+function addOne(num) {
+return num + 1;
+}
+
+^^^ test it^^^ 
+const originalNumber = 10;
+const result = addOne(originalNumber);
+console.log(result);
+
+
+
+#11
+
+
+
+
+#12
+
+
+
+
+***#13***
+
+You are given a string respresesting a sentence. Write a function 'capitalizeFirstLetter' that takes a string as input and returns the
+sentence with the first letter of each word capitalized. 
+
+function capitalizeFirstLetter(sentence){
+const words = sentence.split(' ');
+const capitalizedWords = words.map(word => {
+if (word.length === 0) return '';
+return word.charAt(0).toUpperCase() + word.slice(1);
+
+});
+
+return capitalizedWords.join(' ');
+}
+
+
+
+#14
+
+
+
+
+
 
 
 
