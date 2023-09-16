@@ -7,7 +7,12 @@ Write a function createGreetingFunction that generates and returns a greeting fu
 Practice Problem 3:
 Design a function generateHelloWorldFunction which produces and returns a function. When the function produced by generateHelloWorldFunction is called, it should return 'hello world' as a string. *)
 
-function createFunction({
+
+#1
+
+
+
+function createFunction(){
 function returnFunction(){
 return 'hello world'
 ;
@@ -18,3 +23,41 @@ const helloWorldFunction = createFunction();
 
 const result = helloWorldFunction();
 console.log(result)
+
+
+
+
+
+#2
+
+function createGreetingFunction(){
+function returnFunction(){
+return 'hello world';
+}
+return returnFunction;
+}
+const helloWorldFunction = createGreetingFunction();
+
+const result = helloWorldFunction();
+console.log(result)
+
+
+
+
+#3
+
+function generateHelloWorldFunction(){
+function returnFunction(){
+return 'hello world';
+}
+return returnFunction;
+}
+const result = generateHelloWorldFunction();
+console.log(result)
+
+
+
+
+
+
+
