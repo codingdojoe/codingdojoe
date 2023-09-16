@@ -109,6 +109,23 @@ of those numbers.
 
 
 
+
+**** Pratice Problem 15 ****
+
+You need to create a function that generates and returns a new function. 
+The newly created function, when invoked, should return a specific string.
+
+
+
+**** Pratice Problem 16 ****
+
+You need to create a function that generates and returns a new function. 
+The newly created function, when invoked, should return a predefined sentence.
+
+
+
+
+
 #1
 
 
@@ -295,6 +312,40 @@ console.log(result);
 
 #11
 
+Declare a function 'evensAndOdds';, which takes two arguments: an array of numbers, and
+another array containing two functions.
+'evensAndOdds' should run the *first* callback on every odd number from the numbers array,
+and the *second* callback on every even number. It should return a new array containing the
+results of these callbacks, in the same order.
+
+Test your 'evensAndOdds' function using the 'nums' array as the first argument, and an array
+containing 'subtractOne' and 'addOne' as the second argument.
+You should receive the result [5, 23, 86, 54, 31, 42].
+
+
+const evensAndOdds(numbers, [callBackOdd, callBackEven]) {
+const resultArray = [];
+for (let i = 0; i < numbers.length; i++) {
+if (numbers[i] % 2 === 0) {
+resultArray.push(callBackEven(numbers[i]));
+}
+else {
+resultArray.push(callBackOdd(numbers[i]));
+}
+}
+
+return resultsArray;
+
+}
+
+function addOne(num){
+return num + 1;
+
+}
+
+function minusOne(num){
+return num - 1;
+}
 
 
 
@@ -322,6 +373,28 @@ return capitalizedWords.join(' ');
 
 
 #14
+
+You are given an array of numbers. Write a function 'getAverage' that takes an array of numbers as input and returns the average (mean)
+of those numbers. 
+
+function getAverage(numbers){
+if (numbers.length === 0) {
+return undefined;
+}
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++){
+
+const average = sum / numbers.length;
+return average; 
+}
+const numbersArray = [1, 2, 3, 4, 5];
+const averageValue = getAverage(numbersArray);
+console.log(averageValue)
+
+
+
+#15 
 
 
 
