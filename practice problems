@@ -1,11 +1,25 @@
 (* Practice Problem 1:
-Create a function createFunction that creates and returns a function. When the newly created function is called, it should return the string 'hello world'.
+Create a function createFunction that creates and returns a function. When the newly created function is called,
+it should return the string 'hello world'.
 
 Practice Problem 2:
-Write a function createGreetingFunction that generates and returns a greeting function. When the generated function is invoked, it should return the string 'hello world'.
+Write a function createGreetingFunction that generates and returns a greeting function. When the generated function is invoked,
+it should return the string 'hello world'.
 
 Practice Problem 3:
-Design a function generateHelloWorldFunction which produces and returns a function. When the function produced by generateHelloWorldFunction is called, it should return 'hello world' as a string. *)
+Design a function generateHelloWorldFunction which produces and returns a function.
+When the function produced by generateHelloWorldFunction is called, it should return 'hello world' as a string. *)
+
+Practice Problem 4:
+Write a function calculateArea that takes two parameters, length and width, and calculates the area of a rectangle. Return the calculated area.
+
+Practice Problem 5:
+Create a function reverseString that takes a string as input and returns the reverse of that string.
+For example, if the input is "hello," the function should return "olleh."
+
+Practice Problem 6:
+Design a function findMax that takes an array of numbers as input and returns the maximum value in the array.
+For example, if the input is [4, 7, 1, 9, 2], the function should return 9.
 
 
 #1
@@ -46,6 +60,8 @@ console.log(result)
 
 #3
 
+
+
 function generateHelloWorldFunction(){
 function returnFunction(){
 return 'hello world';
@@ -54,6 +70,23 @@ return returnFunction;
 }
 const result = generateHelloWorldFunction();
 console.log(result)
+
+
+
+#4
+
+
+
+function calculateArea(length,width){
+const area = length * width;
+return area;
+}
+const newNewResult = calculateArea(5, 10);
+console.log(newNewResult)
+
+
+
+#5
 
 
 
