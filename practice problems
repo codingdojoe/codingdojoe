@@ -112,8 +112,8 @@ of those numbers.
 
 **** Pratice Problem 15 ****
 
-You need to create a function that generates and returns a new function. 
-The newly created function, when invoked, should return a specific string.
+You need to define a function, 'createStringFunction' that generates and returns a new function. 
+The newly created function, when invoked, should return a specific string, of your choice.
 
 
 
@@ -121,6 +121,68 @@ The newly created function, when invoked, should return a specific string.
 
 You need to create a function that generates and returns a new function. 
 The newly created function, when invoked, should return a predefined sentence.
+
+
+**** Pratice Problem 17 ****
+
+Create a function addTwo that accepts one input and adds 2 to it.
+
+
+
+**** Pratice Problem 18 ****
+
+Create a function addS that accepts one input and adds an "s" to it.
+
+
+
+
+**** Pratice Problem 19 ****
+
+Create a function called 'map' that takes two inputs:
+1. an array of numbers (a list of numbers)
+2. a 'callback' function - a function that is applied to each element of the array
+(inside of the function 'map')
+Have 'map' return a new array filled with numbers that are the result of using the 'callback'
+function on each element of the input array.
+
+
+
+
+**** Pratice Problem 20 ****
+
+Create a function called 'forEach' that takes an array and a callback, and runs the callback
+on each element of the array. 'forEach' does not return anything.
+
+
+
+
+
+**** Pratice Problem 21 ****
+
+
+
+
+
+
+**** Pratice Problem 22 ****
+
+
+
+
+
+
+
+**** Pratice Problem 23 ****
+
+
+
+
+
+
+
+**** Pratice Problem 24 ****
+
+
 
 
 
@@ -132,8 +194,7 @@ The newly created function, when invoked, should return a predefined sentence.
 
 function createFunction(){
 function returnFunction(){
-return 'hello world'
-;
+return 'hello world';
 }
 return returnFunction;
 }
@@ -395,6 +456,82 @@ console.log(averageValue)
 
 
 #15 
+
+You need to define a function, 'createStringFunction' that generates and returns a new function. 
+The newly created function, when invoked, should return a specific string, of your choice.
+
+function createStringFunction(){
+return function (){
+return 'ok here we go';
+}
+}
+const okHereFunction = createStringFunction();
+console.log(okHereFunction)
+
+
+#16 
+
+You need to create a function that generates and returns a new function. 
+The newly created function, when invoked, should return a predefined sentence.
+
+function randomAssFunction() {
+return function (){
+return 'remember names of functions don\'t mean shittttt';
+};
+}
+
+const thirdRandomAssFunction = randomAssFunction();
+console.log(thirdRandomAssFunction())
+
+
+#17
+
+Create a function addTwo that accepts one input and adds 2 to it.
+
+function addTwo(num){
+return num + 2
+}
+
+#18
+
+Create a function addS that accepts one input and adds an "s" to it.
+
+function addS(word){
+return words + 's'
+}
+
+# 19
+
+Create a function called 'map' that takes two inputs:
+1. an array of numbers (a list of numbers)
+2. a 'callback' function - a function that is applied to each element of the array
+(inside of the function 'map')
+Have 'map' return a new array filled with numbers that are the result of using the 'callback'
+function on each element of the input array.
+
+function map(array, callback){
+const mappedArray =[];
+for (let i = 0; i < array.length; i++){
+mappedArray.push(callback(array[i]))
+}
+return mappedArray
+}
+
+
+#20
+
+Create a function called 'forEach' that takes an array and a callback, and runs the callback
+on each element of the array. 'forEach' does not return anything.
+
+
+function forEach(array, callback) {
+for (let i = 0; i < array.length; i++){
+callback(array[i], i);
+}
+}
+
+
+
 
 
 
