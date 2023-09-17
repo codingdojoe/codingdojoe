@@ -159,22 +159,34 @@ on each element of the array. 'forEach' does not return anything.
 
 **** Pratice Problem 21 ****
 
+const lyrics = "This is Ground Control to Major Tom / You’ve really made the grade"
+
+Declare a variable 'lastLetter' and assign it a value of the last letter of 'lyrics' using
+bracket notation and the .length property we learned in the last challenge.
 
 
 
 
+**** Pratice Problem 22 **** ASSIGNMENT OPERATOR
 
-**** Pratice Problem 22 ****
+You are given an array of five numbers called 'increaseByTwo. Use a for loop to iterate
+through the array and increase each number by two. 
 
+GIVEN: const increaseByTwo = [1, 2, 3, 4, 5]
+//code here
 
-
-
-
-
+console.log(increaseByTwo)
 
 **** Pratice Problem 23 ****
 
+Initialize a variable addThis to 0 and a variable sum to 0. Use a while loop to repeat a code
+block as long as addThis is less than 10. In the code block, add the value of addThis to sum, 
+then increment addThis by 1. After the while loop runs, the value of sum should be the sum of 
+the numbers 0 through 9. It's crucial to note that if there's more than one statement in the 
+loop block, the entire block needs to be enclosed in curly braces {}. This ensures that all 
+statements within the block are executed together in each iteration of the loop.
 
+Given: console.log(sum)
 
 
 
@@ -183,8 +195,47 @@ on each element of the array. 'forEach' does not return anything.
 **** Pratice Problem 24 ****
 
 
+Iterate through the array and multiply a number by 10 if it is greater than or equal to 5.
 
 
+GIVEN: 
+
+const timesTenIfOverFive = [23, 9, 11, 2, 10, 6];
+
+//add code
+
+console.log(timesTenIfOverFive)
+
+
+
+
+**** Problem 25 ****
+
+
+You are given an object called userData. Use a for...in loop to determine if the object contains the property email.
+If it exists, log "Email found!" to the console. If not, log "Email not found!".
+ Given:
+
+const userData = {
+  username: 'john doe',
+  age: 30,
+  email: 'john@example.com'
+};
+
+
+
+
+**** Problem 26 ****
+
+
+Given an object userProfile, use a for...in loop to determine if the object contains the property location. 
+If it exists, set a variable hasLocation to true. If not, set hasLocation to false.
+
+const userProfile = {
+username: 'jsmith',
+age: 25,
+bio: 'Web developer'
+};
 
 
 
@@ -529,6 +580,114 @@ for (let i = 0; i < array.length; i++){
 callback(array[i], i);
 }
 }
+
+
+#21
+
+const lyrics = "This is Ground Control to Major Tom / You’ve really made the grade"
+
+Declare a variable 'lastLetter' and assign it a value of the last letter of 'lyrics' using
+bracket notation and the .length property we learned in the last challenge.
+
+let lastLetter = lyrics[lyrics.length -1]
+
+
+
+#22
+
+
+You are given an array of five numbers called 'increaseByTwo. Use a for loop to iterate
+through the array and increase each number by two. 
+
+GIVEN: const increaseByTwo = [1, 2, 3, 4, 5];
+//code here
+
+console.log(increaseByTwo);
+
+
+
+
+const increaseByTwo = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < increaseByTwo.length; i ++){
+increaseByTwo[i] += 2
+}
+
+console.log(increaseByTwo)
+
+
+
+#23
+
+
+Initialize a variable addThis to 0 and a variable sum to 0. Use a while loop to repeat a code
+block as long as addThis is less than 10. In the code block, add the value of addThis to sum, 
+then increment addThis by 1. After the while loop runs, the value of sum should be the sum of 
+the numbers 0 through 9. It's crucial to note that if there's more than one statement in the 
+loop block, the entire block needs to be enclosed in curly braces {}. This ensures that all 
+statements within the block are executed together in each iteration of the loop
+
+
+
+#24
+
+Iterate through the array and multiply a number by 10 if it is greater than or equal to 5.
+
+
+GIVEN: 
+
+const timesTenIfOverFive = [23, 9, 11, 2, 10, 6];
+
+//add code
+
+console.log(timesTenIfOverFive)
+
+
+
+
+# 25
+
+You are given an object called userData. Use a for...in loop to determine if the object contains the property email.
+If it exists, log "Email found!" to the console. If not, log "Email not found!".
+ Given:
+
+const userData = {
+  username: 'john doe',
+  age: 30,
+  email: 'john@example.com'
+};
+
+let emailFound = false;
+
+for (let key in userData){
+if (key === 'email'){
+emailFound = true;
+break;
+}
+}
+if (emailFound){
+console.log('Email found!');
+} else {
+console.log('Email not found!')
+}
+
+
+
+
+
+# 26
+
+
+Given an object userProfile, use a for...in loop to determine if the object contains the property location. 
+If it exists, set a variable hasLocation to true. If not, set hasLocation to false.
+
+const userProfile = {
+username: 'jsmith',
+age: 25,
+bio: 'Web developer'
+};
+
+
 
 
 
